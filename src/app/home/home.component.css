@@ -1,0 +1,168 @@
+.body {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Open Sans Light';
+  background-color: #F9F9F9;
+}
+
+.sideBar {
+  width: 20%;
+  background-color: #2B2F3E;
+  height: 100vh;
+  padding: 20px;
+
+}
+
+.headSideBar {
+  color: #FFFFFF;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-left: 8px;
+}
+
+.sideBarContent {
+  color: #999999;
+  font-size: 18px;
+}
+
+.mainPart {
+  width: 80%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.itemsBlock {
+  background-color: #FFFFFF;
+  width: 480px;
+  height: 600px;
+  border: 2px solid lightgrey;
+  padding: 20px;
+  position: relative;
+}
+
+.headItemsBlockText {
+  font-size: 36px;
+  color: #565A69;
+  margin-bottom: 20px;
+}
+
+.addBtn {
+  background-color: #27CCC0;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.addNew {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+
+input[type="text"]::-moz-placeholder {
+  opacity: 0.8;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  opacity: 0.8;
+}
+
+.bold {
+  font-weight: bold;
+  vertical-align: middle;
+  color: #2B2F3E;
+  font-size: 16px;
+}
+
+.red {
+  color: red;
+}
+
+.counter {
+  display: inline-block;
+  background-color: #27CCC0;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 12px;
+}
+
+.commentsBlock {
+  width: 444px;
+  min-height: 300px;
+  background-color: #FFFFFF;
+  border: 2px solid lightgrey;
+  padding: 20px;
+}
+
+.commentsHead {
+  margin-bottom: 20px;
+}
+
+.innerCommentsHead {
+  font-size: 36px;
+  color: #565A69;
+}
+
+.square {
+  height: 52px;
+  width: 52px;
+  background-color: #FF8A00;
+}
+
+.font {
+  color: #666666;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.table td {
+  border-top: none;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.addComentSquare {
+  width: 52px;
+  height: 52px;
+  background-color: #E6E6E6;
+}
+
+.addComment {
+  display: flex;
+  margin-left: 12px;
+}
+
+.inputPart {
+  margin-left: 23px;
+}
+
+.commentInput {
+  height: 70px;
+  width: 300px;
+}
+
+td {
+  cursor: pointer;
+}
+
+.fontDiv {
+  width: 300px;
+  min-height: 50px;
+  overflow-wrap: break-word;
+}
+
+.redStick {
+  height: 62px;
+  width: 3px;
+  background: red;
+  position: absolute;
+  top: 0px;
+  left: -2px;
+}

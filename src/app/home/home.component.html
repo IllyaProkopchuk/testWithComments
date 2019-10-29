@@ -1,0 +1,68 @@
+<div class="body">
+  <div class="sideBar">
+    <div class="sideBarInnerText">
+      <p class="headSideBar">dairy app</p>
+      <p class="sideBarContent">Comment with no sense</p>
+    </div>
+  </div>
+  <div class="mainPart">
+    <div class="itemsBlock">
+      <div class="headItemsBlock">
+        <p class="headItemsBlockText">Items</p>
+      </div>
+      <form #form="ngForm" (submit)="onSubmit(form)">
+        <div class="addNew row">
+          <div class="col-8 p-0">
+            <input type="text" [(ngModel)]="itemForm.name" name="name" class="form-control"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+              placeholder="Type name here..." required>
+          </div>
+          <div class="col-4 buttonPart">
+            <button type="submit" [disabled]="form.invalid" class="btn addBtn w-100">Add new</button>
+          </div>
+        </div>
+      </form>
+      <div class="tablePart">
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let arr of currentArray; let i=index">
+              <td class="bold" (click)="showCurrentComments(i)">{{arr?.name}}<div class="counter" *ngIf="arr.comments">
+                  {{(arr?.comments.length) ? arr?.comments.length : 0}}</div>
+              </td>
+              <td><button type="button" class="btn btn-outline-danger w-100" (click)="delete(i)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="redStick" [style.top.px]="yPos" [hidden]="clicked"></div>
+    </div>
+    <div class="commentsBlock">
+      <div class="commentsHead" [hidden]="clicked">
+        <p class="innerCommentsHead">Comments #{{saveCommentIndex+1}}</p>
+      </div>
+      <div class="commentsMainPart" [hidden]="clicked">
+        <div class="commentsTablePart" [hidden]="commentsChecker">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let arr of commentsArray; let i=index">
+                <td class="bb">
+                  <div class="square" [ngStyle]="{'background-color': color}"></div>
+                </td>
+                <td class="font">
+                  <div class="fontDiv">{{arr}}</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="addComment">
+          <div class="addComentSquare"></div>
+          <div class="inputPart"><input type="text" [(ngModel)]="comment" name="comment"
+              class="form-control commentInput" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" (keydown.control.enter)="addComment()">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
