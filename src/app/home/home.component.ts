@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
   clicked: boolean = true;
   saveCommentIndex: number;
 
+
+  
   comment: string;
 
   commentsArray: any;
